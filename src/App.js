@@ -1,10 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-import ProDuctList from './components/ProDuctList';
+import BaiTapGioHang from './component/BaiTapGioHang';
+
 
 function App() {
+
+
   return (
-    <ProDuctList />
+    <div className='App'>
+      <BaiTapGioHang />
+    </div>
   );
 }
 
