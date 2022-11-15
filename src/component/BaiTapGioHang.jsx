@@ -18,13 +18,18 @@ export default class BaiTapGioHang extends Component {
       }
 }
 
+hanldeChiTiet = (sanPham) => {
+  this.setState({
+    stateShoes: sanPham,
+  });
+};
   render() {
-
+    let { stateShoes } = this.state;
     return (
       <div className='container'>
         <h1>Bai tap gio hang</h1>
-        <ModalShoe stateShoes={this.state.stateShoes} />
-        <DanhSachSanPham mangSanPham={shoeData} />
+        <DanhSachSanPham mangSanPham={shoeData} hanldeChiTiet = {this.hanldeChiTiet} />
+        <ModalShoe  stateShoes={stateShoes} />
       </div>
     )
   }

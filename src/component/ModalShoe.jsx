@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 export default class ModalShoe extends Component {
   render() {
     const { stateShoes } = this.props;
@@ -30,23 +31,14 @@ export default class ModalShoe extends Component {
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <div className="modal-body">
-                  <table className="table w-auto">
-                    <thead>
-                      <tr>
-                        <td>Image</td>
-                        <td>Name</td>
-                        <td>Alias</td>
-                        <td>Price</td>
-                        <td>Description</td>
-                        <td>Quantity</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      
-                    </tbody>
-                  </table>
-                </div>
+                <div className="modal-body text-center">
+                <img src={stateShoes.image} className="img-fluid" />
+                <h4>Name: {stateShoes.name}</h4>
+                <h3>Price: {stateShoes.price}$</h3>
+                <p>Description: {stateShoes.description}</p>
+                <p>Quantity: {stateShoes.quantity}</p>
+                 </div>
+
                 <div className="modal-footer">
                   <button
                     type="button"

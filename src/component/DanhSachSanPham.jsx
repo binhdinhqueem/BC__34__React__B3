@@ -3,7 +3,7 @@ import ModalShoe from "./ModalShoe";
 
 export default class DanhSachSanPham extends Component {
   render() {
-    const { mangSanPham } = this.props;
+    const { mangSanPham, hanldeChiTiet } = this.props;
     return (
       <div className="row">
         {mangSanPham.map((sanPham, index) => {
@@ -16,9 +16,8 @@ export default class DanhSachSanPham extends Component {
                 <img src={sanPham.image}></img>
                 <h4>{sanPham.name}</h4>
                 <p>${sanPham.price}</p>
-                <button data-toggle="modal" data-target="#exampleModal" className="btn btn-primary">Xem chi tiết</button>
+                <button data-toggle="modal" data-target="#exampleModal" className="btn btn-primary" onClick={()=>{hanldeChiTiet(sanPham)}}>Xem chi tiết</button>
               </div>
-              <ModalShoe sanPham={sanPham}/>
             </div>
           );
         })}
